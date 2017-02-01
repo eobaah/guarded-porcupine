@@ -1,8 +1,7 @@
 const express = require('express');
 const router = express.Router();
 const path = require( 'path' );
-const { db, getAllBooks, getBook, addBook, updateBook, removeBooks } = require('../database/dbBookStore')
-
+const { db, getAllBooks, getBook, addBook, updateBook, removeBooks } = require('./src/database/dbBookStore')
 
 router.get( '/', ( req, res, next ) => {
   getAllBooks()

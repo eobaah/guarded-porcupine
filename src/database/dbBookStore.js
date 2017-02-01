@@ -24,10 +24,8 @@ const updateBook = (id, book) => {
   book.image_url, book.price, book.keywords ])
 }
 
-
 const removeBooks = id =>
   db.none( `DELETE FROM bookshb WHERE id=$1`, [ id ] )
-
 
 
 module.exports = {

@@ -4,5 +4,10 @@ block content
   h1= title
   p Welcome to #{title}
 
-  for book in books
-    img(src=book.image_url, alt='book covers', height='42', width='42')
+  button(type='button') Add book
+  .wrapper
+    for book in books
+      .bookContainer
+        img(class=`image${book.id}` src=book.image_url)
+        p.title=book.title
+        p.author=book.author
