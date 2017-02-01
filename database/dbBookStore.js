@@ -8,13 +8,13 @@ const getAllBooks = () =>
 const getBook = (id) =>
     db.one( `SELECT * FROM bookshb where id=$1`, [id] )
 
-const addBook = ({ title, author, description, genre, image, price, keywords }) =>
+const addBook = ({ title, author, description, genre, image_url, price, keywords }) =>
   db.oneOrNone(
     `INSERT INTO
-      bookshb (title, author, description, genre, image_url, price, keywords)
+       (title, author, description, genre, image_url, price, keywords)
     VALUES
       ($1, $2, $3, $4, $5, $6, $7)`,
-    [title, author, description, genre, image, price, keywords] )
+    [title, author, description, genre, image_url, price, keywords] )
 
 const updateBook = (id, book) => {
   return db.oneOrNone(`UPDATE
