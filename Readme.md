@@ -32,8 +32,8 @@ Creating this web application will provide exposure to:
 ## Daily goals
 |Day| Mon | Tues | Wed | Thurs | Fri | Sat |Sun|
 |------------|------------|------------|------------|------------|------------|------------ |------------ |
-||Review - The Road to Learn React; setup server; create schema and connect to the database;|implemented create, read, update|implemented delete functionality and focus on UI|focus on UI|focus on UI|||
-|Time|5 hrs|0 hrs|0 hrs|0 hrs|0 hrs|TBD|TBD
+||Review - The Road to Learn React; setup server; create schema and connect to the database;|implemented create, read, delete|implemented update functionality and focus on UI|focus on UI|focus on UI|||
+|Time|5 hrs|7 hrs|0 hrs|0 hrs|0 hrs|TBD|TBD
 
 
 
