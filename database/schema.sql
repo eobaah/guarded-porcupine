@@ -1,6 +1,4 @@
-var pgp = require( 'pg-promise' )()
-var connectionString = process.env.DATABASE_URL || 'postgress://localhost:5432/guarded-porcupine-db'
-var db = pgp( connectionString )
+const db = require( './dbBookStore' )
 
 var sql = `DROP TABLE IF EXISTS booksHB;
   CREATE TABLE IF NOT EXISTS booksHB (
