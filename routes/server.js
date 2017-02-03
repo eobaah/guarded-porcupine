@@ -1,12 +1,17 @@
 const express = require('express');
 const router = express.Router();
 const path = require( 'path' );
-const { db, getAllBooks, getBook, addBook, updateBook, removeBooks } = require('./src/database/dbBookStore')
+const { db, getAllBooks, getBook, addBook, updateBook, removeBooks } = require('../src/database/dbBookStore')
 
 router.get( '/', ( req, res, next ) => {
+  const pathyPath = path.join(__dirname + '/../views/index.html')
+  res.sendFile(pathyPath)
+})
+
+router.get('/books', ( req, res, next ) => {
   getAllBooks()
-    .then( books => {
-    res.render( 'index', { books, title: 'Bookstore App using React' } )
+  .then( books => {
+    res.json( books )
   })
 })
 
