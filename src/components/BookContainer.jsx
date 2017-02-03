@@ -1,4 +1,38 @@
 import React from 'react'
+import Modal from 'react-modal'
+import FontAwesome from 'react-fontawesome'
+import DescButton from './DescButton.jsx'
+import EditButton from './EditButton.jsx'
+import DeleteButton from './DeleteButton.jsx'
 
-class BookContainer extends React.Component {
-  };
+
+
+export default class BookContainer extends React.Component {
+
+  constructor(props) {
+    super(props)
+
+  }
+
+
+
+  render() {
+
+    const bookInfo = this.props.bookInfo
+
+    return (
+      <div className="bookContainer">
+        <img src={bookInfo.image_url} />
+        <div className="bookHeadInfo">
+          <div>{bookInfo.title}</div>
+          <div>{bookInfo.author}</div>
+        </div>
+        <div className="buttonContainer">
+          <DescButton></DescButton>
+          <EditButton></EditButton>
+          <DeleteButton></DeleteButton>
+        </div>
+      </div>
+    )
+  }
+}
