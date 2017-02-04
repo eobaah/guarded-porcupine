@@ -10,7 +10,7 @@ const getBook = (id) =>
 
 const addBook = ({ title, author, description, genre, image_url, price, keywords }) =>
   db.oneOrNone(
-    `INSERT INTO
+    `INSERT INTO bookshb
        (title, author, description, genre, image_url, price, keywords)
     VALUES
       ($1, $2, $3, $4, $5, $6, $7)`,

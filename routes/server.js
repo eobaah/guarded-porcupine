@@ -8,13 +8,6 @@ router.get( '/', ( req, res, next ) => {
   res.sendFile( pathyPath )
 })
 
-router.get( '/', ( req, res, next ) => {
-  getAllBooks()
-    .then( books => {
-    res.render( 'index', { books, title: 'Bookstore App using React' } )
-  })
-})
-
 router.get( '/books', ( req, res, next ) => {
   getAllBooks()
     .then( books => {
@@ -29,11 +22,10 @@ router.get( '/:id', ( req, res, next ) => {
   })
 })
 
-router.post( '/', ( req, res, next ) => {
+router.post( '/books', ( req, res, next ) => {
   const book = req.body
-  console.log(book)
   addBook(book)
-    .then(() => res.redirect('/'))
+    .then( () => res.redirect('/'))
 })
 
 router.post( '/delete/:id', ( req, res, next ) => {

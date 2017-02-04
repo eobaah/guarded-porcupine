@@ -1,9 +1,10 @@
 import React from 'react'
 import Modal from 'react-modal'
 import FontAwesome from 'react-fontawesome'
+import AddBookForm from './AddBookForm.jsx'
 import ModalWindow from './ModalWindow.jsx'
 
-export default class DescButton extends React.Component {
+export default class AddBookButton extends React.Component {
 
 
   constructor(props) {
@@ -22,12 +23,11 @@ export default class DescButton extends React.Component {
   }
 
   render() {
-
     return (
-        <div className="decriptionModal">
-          <i onClick={() => this.openModal()} className="fa fa-file-text-o description" aria-hidden="true"></i>
+        <div className="addBookModal">
+          <button onClick={() => this.openModal()}>Add Book</button>
           <ModalWindow className="modalText" isOpen={this.state.isModalOpen} onClose={() => this.closeModal()}>
-            <div className="bookText">{this.props.bookInfo.description}</div>
+            <AddBookForm />
             <button onClick={() =>
             this.closeModal()}>Close</button>
           </ModalWindow>

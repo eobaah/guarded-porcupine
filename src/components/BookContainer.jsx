@@ -11,13 +11,9 @@ export default class BookContainer extends React.Component {
 
   constructor(props) {
     super(props)
-
   }
 
-
-
   render() {
-
     const bookInfo = this.props.bookInfo
 
     return (
@@ -28,7 +24,7 @@ export default class BookContainer extends React.Component {
           <div>{bookInfo.author}</div>
         </div>
         <div className="buttonContainer">
-          <DescButton></DescButton>
+          <DescButton bookInfo={bookInfo}></DescButton>
           <EditButton></EditButton>
           <DeleteButton></DeleteButton>
         </div>

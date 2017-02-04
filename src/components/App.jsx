@@ -4,6 +4,7 @@ import FontAwesome from 'react-fontawesome'
 import Modal from 'react-modal'
 
 
+import AddBookButton from './AddBookButton.jsx'
 import DescButton from './DescButton.jsx'
 import EditButton from './EditButton.jsx'
 import DeleteButton from './DeleteButton.jsx'
@@ -38,10 +39,13 @@ export default class App extends Component {
     )
 
     return (
-      <div className="wrapper">
-       {booksTitles}
+      <div className="mainWrapper">
+        <div className="addBookButton"><AddBookButton /></div>
+        <div className="wrapper">
+         {booksTitles}
+        </div>
       </div>
     )
   }
-  
+
 }

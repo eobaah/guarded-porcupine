@@ -5,7 +5,7 @@ import DescButton from './DescButton.jsx'
 import EditButton from './EditButton.jsx'
 import DeleteButton from './DeleteButton.jsx'
 
-export default class ModalWindow extends React.Component {
+export default class AddBookModalWindow extends React.Component {
 
   close(e) {
     e.preventDefault()

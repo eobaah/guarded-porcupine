@@ -6,6 +6,17 @@ body {
   color: #fff;
 }
 
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+.addBookButton {
+  text-align: center;
+  margin: 2% 0;
+}
 .wrapper {
   display: flex;
   flex-direction: row;
@@ -63,6 +74,12 @@ body {
   color: rgb(0,0,0);
 }
 
-.modalText{
+.bookText{
   color: black;
+}
+
+.addBookFormStyle {
+  color: black;
+  display: flex;
+  flex-direction: column;
 }
