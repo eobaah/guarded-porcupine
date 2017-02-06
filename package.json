@@ -1,0 +1,37 @@
+{
+  "name": "app",
+  "version": "0.0.0",
+  "main": "index.js",
+  "private": true,
+  "scripts": {
+    "webpack": "webpack --progress --colors --watch",
+    "server": "nodemon ./bin/www --exec babel-node",
+    "start": "npm run server & npm run webpack"
+  },
+  "dependencies": {
+    "babel-cli": "^6.22.2",
+    "babel-core": "^6.22.1",
+    "babel-loader": "^6.2.10",
+    "babel-preset-latest": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "body-parser": "~1.15.2",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.2.0",
+    "express": "~4.14.0",
+    "jquery": "^3.1.1",
+    "morgan": "~1.7.0",
+    "pg-promise": "^5.5.6",
+    "pug": "~2.0.0-beta6",
+    "react": "^15.4.2",
+    "react-addons-css-transition-group": "^15.4.2",
+    "react-css-transition-replace": "^2.1.0",
+    "react-dom": "^15.4.2",
+    "react-fontawesome": "^1.5.0",
+    "react-modal": "^1.6.5",
+    "serve-favicon": "~2.3.0",
+    "webpack": "^2.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
+  }
+}
